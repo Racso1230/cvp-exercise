@@ -29,9 +29,10 @@
 
 <?php
 
-include_once 'db_connect.php';
+include 'db_connect.php';
 
 $object = new Database();
+//test database connection
 $testConnect = $object->connect();
 
 

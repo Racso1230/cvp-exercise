@@ -2,13 +2,21 @@ html {
     scroll-behavior: smooth;
 }
 
+/*body{
+    
+}*/
+
 h1 { 
     text-align: center;
 }
 
 .nav {
+    display:flex;
     background-color: #333;
-    overflow:hidden;
+    overflow: hidden;
+    padding: 30px 10px;
+    margin: auto;
+    justify-content:center;
 }
 
 .nav a {
@@ -27,4 +35,11 @@ h1 {
 .nav a.active {
     background-color: grey;
     color:white;
+}
+
+.nav .logo {
+    width:90px;
+    height:46px;
+    margin-right: 20px;
+    margin-left: -50px;
 }

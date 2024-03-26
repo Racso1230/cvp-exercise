@@ -9,6 +9,7 @@
 <body>
 
 <div class= "nav">
+    <img  class = "logo "data-pagespeed-no-transform="" data-pagespeed-no-defer="" alt="CVP Homepage" src="https://cvp.com/img/assets/cvp_logo_2021.svg">
     <a class="active" href="https://cvp.com/department/cameras">Cameras</a>
     <a href="https://cvp.com/department/lenses">Lenses</a>
     <a href="https://cvp.com/department/accessories">Accessories</a>

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,24 +27,15 @@
 </body>
 </html>
 
-
-
-
-
 <?php
-$serverName = "localhost";
-$userName = "root";
-$password = "";
 
-try {
-    $conn = new PDO("mysql:host=$serverName;dbname=cvp_exercise", $userName, $password);
+include_once 'db_connect.php';
 
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo("Connected");
-} catch(PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
-
+$object = new Database();
+$testConnect = $object->connect();
 
 
 ?>
+
+
+

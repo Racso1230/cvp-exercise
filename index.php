@@ -9,8 +9,9 @@
 <body>
 
 <div class= "nav">
-    <img  class = "logo "data-pagespeed-no-transform="" data-pagespeed-no-defer="" alt="CVP Homepage" src="https://cvp.com/img/assets/cvp_logo_2021.svg">
-    <a class="active" href="https://cvp.com/department/cameras">Cameras</a>
+    <a href="https://cvp.com/"><img  class = "logo "data-pagespeed-no-transform="" data-pagespeed-no-defer="" alt="CVP Homepage" src="https://cvp.com/img/assets/cvp_logo_2021.svg"></a>
+    <div class= "nav-items">
+        <a class="active" href="https://cvp.com/department/cameras">Cameras</a>
     <a href="https://cvp.com/department/lenses">Lenses</a>
     <a href="https://cvp.com/department/accessories">Accessories</a>
     <a href="https://cvp.com/department/audio">Audio</a>
@@ -18,6 +19,7 @@
     <a href="https://cvp.com/department/lighting">Lighting</a>
     <a href="https://cvp.com/department/support-motion">Support and Motion</a>
     <a href="https://cvp.com/department/studio">Studio</a>
+    </div>
 </div>
     <h1>CVP Product Catalogue</h1>
 </body>

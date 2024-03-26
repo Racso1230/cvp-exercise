@@ -19,7 +19,7 @@ h1 {
     justify-content:center;
 }
 
-.nav a {
+.nav .nav-items a {
     float:left;
     color: #f2f2f2;
     text-align: center;
@@ -28,16 +28,16 @@ h1 {
     font-size: 17px;
 }
 /**/
-.nav a:hover {
+.nav .nav-items a:hover {
     color: green;
 }
 
-.nav a.active {
+.nav .nav-items a.active {
     background-color: grey;
     color:white;
 }
 
-.nav .logo {
+.nav  .logo {
     width:90px;
     height:46px;
     margin-right: 20px;

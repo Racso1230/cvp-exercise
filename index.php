@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,8 +21,7 @@
     <a href="https://cvp.com/department/studio">Studio</a>
     </div>
 </div>
-    <h1>CVP Product Catalogue</h1>
-
+    <h1>Our Products</h1>
     <div class = "product-card">
         <img>
         <div class = "product-desc">

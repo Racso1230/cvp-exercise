@@ -1,10 +1,10 @@
 <?php
 class Database {
 
-private $serverName;
-private $userName;
+private $servername;
+private $username;
 private $password;
-private $dbName;
+private $dbname;
 
 public function connect() {
 

@@ -30,10 +30,24 @@
 <?php
 
 include 'db_connect.php';
+include 'catalogue.php';
 
-$object = new Database();
-//test database connection
-$testConnect = $object->connect();
+$dbObject = new Database();
+$connect = $dbObject->connect();
+
+$productInstance = new Products($connect);
+$products = $productInstance->getAllProducts();
+
+foreach($products as $product) {
+    echo "Product ID: " . htmlspecialchars($product['productID']) . "<br>";
+    echo "Product Name: " . htmlspecialchars($product['product_name']) . "<br>";
+    echo "Category: " . htmlspecialchars($product['category']) . "<br>";
+    echo "Price: " . htmlspecialchars($product['price']) . "<br>";
+    echo "Image: " . htmlspecialchars($product['image']) . "<br>";
+    echo "Link: " . htmlspecialchars($product['link']) . "<br>";
+    echo "Status: " . htmlspecialchars($product['stock_status']) . "<br>";
+    
+}
 
 
 ?>

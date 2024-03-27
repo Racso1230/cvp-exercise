@@ -24,6 +24,16 @@
     </div>
 </div>
     <h1>CVP Product Catalogue</h1>
+
+    <div class = "product-card">
+        <img>
+        <div class = "product-desc">
+            <h2>Product Name</h2>
+            <p>Product Descrption</p>
+            <div class="price"></div>
+            <button>Add to Cart</button>
+        </div>
+    </div>
 </body>
 </html>
 
@@ -47,6 +57,7 @@ $products = $productInstance->getAllProducts();
 used a foreach statement to loop through each selected row from the data as the data is in an array data type
 the htmlspecialchars function is used for good practice-helps prevent XSS attacks and is generally encouraged from what I understand
 */
+/*
 foreach($products as $product) {
     echo "Product ID: " . htmlspecialchars($product['productID']) . "<br>";
     echo "Product Name: " . htmlspecialchars($product['product_name']) . "<br>";
@@ -57,7 +68,7 @@ foreach($products as $product) {
     echo "Status: " . htmlspecialchars($product['stock_status']) . "<br>";
     
 }
-
+*/
 
 ?>
 

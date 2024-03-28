@@ -1,10 +1,11 @@
 html {
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
-/*body{
-    
-}*/
+body{
+    font-family: 'proxima-nova', Arial, Helvetica, sans-serif;   
+}
 
 h1 { 
     text-align: center;
@@ -44,17 +45,24 @@ h1 {
     margin-left: -50px;
 }
 
+.product {
+    box-shadow: 0px 7px 7px rgba(0,0,0,0.1) ;
+}
 
-
-.product-card {
-    width:300px;
-    height:400px;
-    overflow: hidden;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #f9f9f9;
-    box-shadow: 0px 5px 10px rgba(0,0,0,0.3); 
+.product-container {
+    display:grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+    width: 100%;
+    padding:0;
     margin:auto;
 }
+
+.product-desc {
+    text-align: center;
+}
+
+.product-container img {
+    margin: 0 auto;
+}
+

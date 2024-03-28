@@ -21,8 +21,118 @@
     <a href="https://cvp.com/department/studio">Studio</a>
     </div>
 </div>
-    <h1>Our Products</h1>
-    <div class = "product-card">
+
+<h1>Our Products</h1>
+
+<div class="product-container">
+    <div class="product">
+       <center> <img src="https://cdn.cvp.com/images/products/12-09-20231694528687burano-small.jpg" alt = "placeholder"></center>
+        <div class = "product-desc">
+            <h3>Product Name</h3>
+            <p>Product Description</p>
+            <p>Price</p>
+            <p>Stock: </p>
+            <a href = "https://cvp.com/product/sony-burano-8k-camera">Link</a>
+        </div>
+    </div>
+
+    <div class="product">
+       <center> <img src="https://cdn.cvp.com/images/products/12-09-20231694528687burano-small.jpg" alt = "placeholder"></center>
+        <div class = "product-desc">
+            <h3>Product Name</h3>
+            <p>Product Description</p>
+            <p>Price</p>
+            <p>Stock: </p>
+            <a href = "https://cvp.com/product/sony-burano-8k-camera">Link</a>
+        </div>
+    </div>
+
+    <div class="product">
+       <center> <img src="https://cdn.cvp.com/images/products/12-09-20231694528687burano-small.jpg" alt = "placeholder"></center>
+        <div class = "product-desc">
+            <h3>Product Name</h3>
+            <p>Product Description</p>
+            <p>Price</p>
+            <p>Stock: </p>
+            <a href = "https://cvp.com/product/sony-burano-8k-camera">Link</a>
+        </div>
+    </div>
+
+    <div class="product">
+       <center> <img src="https://cdn.cvp.com/images/products/12-09-20231694528687burano-small.jpg" alt = "placeholder"></center>
+        <div class = "product-desc">
+            <h3>Product Name</h3>
+            <p>Product Description</p>
+            <p>Price</p>
+            <p>Stock: </p>
+            <a href = "https://cvp.com/product/sony-burano-8k-camera">Link</a>
+        </div>
+    </div>
+
+    <div class="product">
+       <center> <img src="https://cdn.cvp.com/images/products/12-09-20231694528687burano-small.jpg" alt = "placeholder"></center>
+        <div class = "product-desc">
+            <h3>Product Name</h3>
+            <p>Product Description</p>
+            <p>Price</p>
+            <p>Stock: </p>
+            <a href = "https://cvp.com/product/sony-burano-8k-camera">Link</a>
+        </div>
+    </div>
+
+    <div class="product">
+       <center> <img src="https://cdn.cvp.com/images/products/12-09-20231694528687burano-small.jpg" alt = "placeholder"></center>
+        <div class = "product-desc">
+            <h3>Product Name</h3>
+            <p>Product Description</p>
+            <p>Price</p>
+            <p>Stock: </p>
+            <a href = "https://cvp.com/product/sony-burano-8k-camera">Link</a>
+        </div>
+    </div>
+
+    <div class="product">
+       <center> <img src="https://cdn.cvp.com/images/products/12-09-20231694528687burano-small.jpg" alt = "placeholder"></center>
+        <div class = "product-desc">
+            <h3>Product Name</h3>
+            <p>Product Description</p>
+            <p>Price</p>
+            <p>Stock: </p>
+            <a href = "https://cvp.com/product/sony-burano-8k-camera">Link</a>
+        </div>
+    </div>
+
+    <div class="product">
+       <center> <img src="https://cdn.cvp.com/images/products/12-09-20231694528687burano-small.jpg" alt = "placeholder"></center>
+        <div class = "product-desc">
+            <h3>Product Name</h3>
+            <p>Product Description</p>
+            <p>Price</p>
+            <p>Stock: </p>
+            <a href = "https://cvp.com/product/sony-burano-8k-camera">Link</a>
+        </div>
+    </div>
+
+    <div class="product">
+       <center> <img src="https://cdn.cvp.com/images/products/12-09-20231694528687burano-small.jpg" alt = "placeholder"></center>
+        <div class = "product-desc">
+            <h3>Product Name</h3>
+            <p>Product Description</p>
+            <p>Price</p>
+            <p>Stock: </p>
+            <a href = "https://cvp.com/product/sony-burano-8k-camera">Link</a>
+        </div>
+    </div>
+    
+</div>
+
+    
+</body>
+</html>
+
+<?php
+
+/* <div class = "product-card">
         <img>
         <div class = "product-desc">
             <h2>Product Name</h2>
@@ -30,11 +140,7 @@
             <div class="price"></div>
             <button>Add to Cart</button>
         </div>
-    </div>
-</body>
-</html>
-
-<?php
+    </div>*/ 
 //includes the files that connect to the database and that allows me to grab data from the cvp_exercise table
 include 'db_connect.php';
 include 'catalogue.php';

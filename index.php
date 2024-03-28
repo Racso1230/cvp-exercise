@@ -24,6 +24,15 @@
 
 <h1>Our Products</h1>
 
+
+
+    
+</body>
+</html>
+
+<?php
+
+/*
 <div class="product-container">
     <div class="product">
        <center> <img src="https://cdn.cvp.com/images/products/12-09-20231694528687burano-small.jpg" alt = "placeholder"></center>
@@ -125,22 +134,7 @@
     </div>
     
 </div>
-
-    
-</body>
-</html>
-
-<?php
-
-/* <div class = "product-card">
-        <img>
-        <div class = "product-desc">
-            <h2>Product Name</h2>
-            <p>Product Descrption</p>
-            <div class="price"></div>
-            <button>Add to Cart</button>
-        </div>
-    </div>*/ 
+*/ 
 //includes the files that connect to the database and that allows me to grab data from the cvp_exercise table
 include 'db_connect.php';
 include 'catalogue.php';
@@ -172,6 +166,31 @@ foreach($products as $product) {
     
 }
 */
+/*
+a for each loop to assign vairables to each database record. 
+also echoed out some results to see that they are correctly assined to the vairables
+*/
+foreach($products as $product) {
+  $id = $product['productID'];
+  $productName = $product['product_name'];
+  $category = $product['category'];
+  $price = $product['price'];
+  $image = $product['image'];
+  $link = $product['link'];
+  $stockStatus = $product['stock_status'];
+
+  echo "ID: $id<br>";
+  echo "Product Name $productName <br>";
+  echo "Category $category <br>";
+  echo "Price: $price<br>";
+  echo "Image $image <br>";
+  echo "link $category <br>";
+  echo "Stock Status $stockStatus<br>";
+ 
+
+
+}
+
 
 ?>
 

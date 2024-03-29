@@ -6,8 +6,8 @@
     <link  type="text/css"rel="stylesheet" href="static/static.css">
     <title>CVP Exercise</title>
 </head>
-<body>
 
+<body>
 <div class= "nav">
     <a href="https://cvp.com/"><img  class = "logo "data-pagespeed-no-transform="" data-pagespeed-no-defer="" alt="CVP Homepage" src="https://cvp.com/img/assets/cvp_logo_2021.svg"></a>
     <div class= "nav-items">
@@ -24,6 +24,7 @@
 
 <h1>Our Products</h1>
 
+<!--product container div needs to be excluded from the php as otherwise the foreach loop will attempt to make a new product-container for every set of results (won't display the data properly)-->
 <div class = 'product-container'>
 
 <?php
@@ -32,7 +33,7 @@
 include 'db_connect.php';
 include 'catalogue.php';
 
-//calls the database connection class and calls the connect() function within the object
+//calls the database connection class and calls the connect() function within the object so that data can be displayed on the page
 $dbObject = new Database();
 $connect = $dbObject->connect();
 
@@ -43,32 +44,11 @@ $products vairable is used to call the function that displays that fetches the d
 $productInstance = new Products($connect);
 $products = $productInstance->getAllProducts();
 
-//used a foreach loop to loop through the array (created by the getAllProducts function in the Products class) and have assigned each database vairable to a result.
-//used the htmlspecialchars function to make the vairables less prone to xss attacks
-foreach($products as $product) {
-    $id = htmlspecialchars($product['productID']);
-    $productName = htmlspecialchars($product['product_name']);
-    $category = htmlspecialchars($product['category']);
-    $price = htmlspecialchars($product['price']);
-    $image = htmlspecialchars($product['image']);
-    $link = htmlspecialchars($product['link']);
-    $stockStatus = htmlspecialchars($product['stock_status']);
-
-    echo "<div class='product'>";
-    echo "<img src='$image' alt = 'Image of the $productName'>";
-    echo"<div class = 'product-desc'>";
-    echo"<h3>$productName</h3>";
-    echo"<p>$category</p>";
-    echo"<p>£$price</p>";
-    echo"<p>Stock: $stockStatus</p>";
-    echo"<a href = '$link'>Click here to find out more!</a>";
-    echo"</div>";
-    echo"</div>";
-}
+//calls the html template that displays the products in a grid
+$productTemplate = $productInstance->displayAllProducts();
 ?>
 </div>
-
-    
+ 
 </body>
 </html>
 

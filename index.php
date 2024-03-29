@@ -27,7 +27,7 @@
 <div class = 'product-container'>
 
 
-</div>
+
 
 <?php
 
@@ -56,19 +56,20 @@ foreach($products as $product) {
     $stockStatus = htmlspecialchars($product['stock_status']);
 
     echo "<div class='product'>";
-    echo "<center> <img src='$image' alt = 'placeholder'></center>";
+    echo "<center> <img src='$image' alt = 'Image of the $productName'></center>";
     echo"<div class = 'product-desc'>";
     echo"<h3>$productName</h3>";
     echo"<p>$category</p>";
     echo"<p>£$price</p>";
     echo"<p>Stock: $stockStatus</p>";
-    echo"<a href = '.$link.'>Click here to find out more!</a>";
+    echo"<a href = '$link'>Click here to find out more!</a>";
     echo"</div>";
     echo"</div>";
     
     
-
+}
 ?>
+</div>
 
     
 </body>
@@ -133,7 +134,7 @@ also echoed out some results to see that they are correctly assined to the vaira
   
 
 
-}
+
 
 
 ?>

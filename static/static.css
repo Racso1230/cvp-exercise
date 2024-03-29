@@ -63,6 +63,10 @@ h1 {
 }
 
 .product-container img {
+    max-width: 25%;
+    max-height: 200%;
+    height:auto;
+    display: block;
     margin: 0 auto;
 }
 

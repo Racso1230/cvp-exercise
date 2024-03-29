@@ -9,6 +9,8 @@ body{
 
 h1 { 
     text-align: center;
+    margin-right: 80px;
+    
 }
 
 .nav {
@@ -28,7 +30,7 @@ h1 {
     text-decoration: none;
     font-size: 17px;
 }
-/**/
+
 .nav .nav-items a:hover {
     color: green;
 }
@@ -45,10 +47,6 @@ h1 {
     margin-left: -50px;
 }
 
-.product {
-    box-shadow: 0px 7px 7px rgba(0,0,0,0.1) ;
-}
-
 .product-container {
     display:grid;
     grid-template-columns: auto auto auto;
@@ -58,13 +56,18 @@ h1 {
     margin:auto;
 }
 
+.product {
+    box-shadow: 0px 7px 7px rgba(0,0,0,0.1) ;
+}
+
+
 .product-desc {
     text-align: center;
 }
 
 .product-container img {
     max-width: 25%;
-    max-height: 200%;
+    max-height: 150px;
     height:auto;
     display: block;
     margin: 0 auto;

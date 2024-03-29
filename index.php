@@ -26,9 +26,6 @@
 
 <div class = 'product-container'>
 
-
-
-
 <?php
 
 //includes the files that connect to the database and that allows me to grab data from the cvp_exercise table
@@ -46,6 +43,8 @@ $products vairable is used to call the function that displays that fetches the d
 $productInstance = new Products($connect);
 $products = $productInstance->getAllProducts();
 
+//used a foreach loop to loop through the array (created by the getAllProducts function in the Products class) and have assigned each database vairable to a result.
+//used the htmlspecialchars function to make the vairables less prone to xss attacks
 foreach($products as $product) {
     $id = htmlspecialchars($product['productID']);
     $productName = htmlspecialchars($product['product_name']);
@@ -56,7 +55,7 @@ foreach($products as $product) {
     $stockStatus = htmlspecialchars($product['stock_status']);
 
     echo "<div class='product'>";
-    echo "<center> <img src='$image' alt = 'Image of the $productName'></center>";
+    echo "<img src='$image' alt = 'Image of the $productName'>";
     echo"<div class = 'product-desc'>";
     echo"<h3>$productName</h3>";
     echo"<p>$category</p>";
@@ -65,8 +64,6 @@ foreach($products as $product) {
     echo"<a href = '$link'>Click here to find out more!</a>";
     echo"</div>";
     echo"</div>";
-    
-    
 }
 ?>
 </div>
@@ -75,57 +72,8 @@ foreach($products as $product) {
 </body>
 </html>
 
-<?php
-
-/*
-<div class="product-container">
-    <div class="product">
-       <center> <img src="https://cdn.cvp.com/images/products/12-09-20231694528687burano-small.jpg" alt = "placeholder"></center>
-        <div class = "product-desc">
-            <h3>Product Name</h3>
-            <p>Product Description</p>
-            <p>Price</p>
-            <p>Stock: </p>
-            <a href = "https://cvp.com/product/sony-burano-8k-camera">Link</a>
-        </div>
-    </div>
-</div>
 
 
-/*
-used a foreach statement to loop through each selected row from the data as the data is in an array data type
-the htmlspecialchars function is used for good practice-helps prevent XSS attacks and is generally considered good practice
-*/
-/*
-foreach($products as $product) {
-    echo "Product ID: " . htmlspecialchars($product['productID']) . "<br>";
-    echo "Product Name: " . htmlspecialchars($product['product_name']) . "<br>";
-    echo "Category: " . htmlspecialchars($product['category']) . "<br>";
-    echo "Price: " . htmlspecialchars($product['price']) . "<br>";
-    echo "Image: " . htmlspecialchars($product['image']) . "<br>";
-    echo "Link: " . htmlspecialchars($product['link']) . "<br>";
-    echo "Status: " . htmlspecialchars($product['stock_status']) . "<br>";
-    
-}
-*/
-/*
-a for each loop to assign vairables to each database record. 
-also echoed out some results to see that they are correctly assined to the vairables
-*/
-
-
-  /*
-  echo "ID: $id<br>";
-  echo "Product Name $productName <br>";
-  echo "Category $category <br>";
-  echo "Price: $price<br>";
-  echo "Image $image <br>";
-  echo "link $link <br>";
-  echo "Stock Status $stockStatus<br>";
- */
-
-
-  //echo "This product name is:.$productName.<br>";
  
   
 
@@ -137,7 +85,7 @@ also echoed out some results to see that they are correctly assined to the vaira
 
 
 
-?>
+
 
 
 

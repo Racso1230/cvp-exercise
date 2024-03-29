@@ -6,7 +6,6 @@ class Products {
     public function __construct(PDO $db) {
         $this->db = $db;
     }
-    //used to retrieve all products from the database cvp_exercise
 
     /*
     $stmt acts as a way to get all of the products from the cvp_exercise table by using a simple sql statement

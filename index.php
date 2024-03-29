@@ -152,7 +152,7 @@ $products = $productInstance->getAllProducts();
 
 /*
 used a foreach statement to loop through each selected row from the data as the data is in an array data type
-the htmlspecialchars function is used for good practice-helps prevent XSS attacks and is generally encouraged from what I understand
+the htmlspecialchars function is used for good practice-helps prevent XSS attacks and is generally considered good practice
 */
 /*
 foreach($products as $product) {
@@ -179,14 +179,36 @@ foreach($products as $product) {
   $link = $product['link'];
   $stockStatus = $product['stock_status'];
 
+  /*
   echo "ID: $id<br>";
   echo "Product Name $productName <br>";
   echo "Category $category <br>";
   echo "Price: $price<br>";
   echo "Image $image <br>";
-  echo "link $category <br>";
+  echo "link $link <br>";
   echo "Stock Status $stockStatus<br>";
- 
+ */
+
+
+  //echo "This product name is:.$productName.<br>";
+  echo "<div class = 'product-container'>";
+  echo "<div class='product'>";
+  echo "<center> <img src='$image' alt = 'placeholder'></center>";
+  echo"<div class = 'product-desc'>";
+  echo"<h3>$productName</h3>";
+  echo"<p>$category</p>";
+  echo"<p>£$price</p>";
+  echo"<p>Stock: $stockStatus</p>";
+  echo"<a href = '.$link.'>Click here to find out more!</a>";
+  echo"</div>";
+  echo"</div>";
+  echo"</div>";
+  
+  
+
+
+  
+  
 
 
 }

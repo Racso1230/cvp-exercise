@@ -24,7 +24,51 @@
 
 <h1>Our Products</h1>
 
+<div class = 'product-container'>
 
+
+</div>
+
+<?php
+
+//includes the files that connect to the database and that allows me to grab data from the cvp_exercise table
+include 'db_connect.php';
+include 'catalogue.php';
+
+//calls the database connection class and calls the connect() function within the object
+$dbObject = new Database();
+$connect = $dbObject->connect();
+
+/*
+calls the products class from within catalogue.php but also passes the dbo object (linking the pdo object to the retrieval object) within the function
+$products vairable is used to call the function that displays that fetches the data from a simple sql select query into an array (from the catalogue.php return statement)
+*/
+$productInstance = new Products($connect);
+$products = $productInstance->getAllProducts();
+
+foreach($products as $product) {
+    $id = htmlspecialchars($product['productID']);
+    $productName = htmlspecialchars($product['product_name']);
+    $category = htmlspecialchars($product['category']);
+    $price = htmlspecialchars($product['price']);
+    $image = htmlspecialchars($product['image']);
+    $link = htmlspecialchars($product['link']);
+    $stockStatus = htmlspecialchars($product['stock_status']);
+
+    echo "<div class='product'>";
+    echo "<center> <img src='$image' alt = 'placeholder'></center>";
+    echo"<div class = 'product-desc'>";
+    echo"<h3>$productName</h3>";
+    echo"<p>$category</p>";
+    echo"<p>£$price</p>";
+    echo"<p>Stock: $stockStatus</p>";
+    echo"<a href = '.$link.'>Click here to find out more!</a>";
+    echo"</div>";
+    echo"</div>";
+    
+    
+
+?>
 
     
 </body>
@@ -44,111 +88,8 @@
             <a href = "https://cvp.com/product/sony-burano-8k-camera">Link</a>
         </div>
     </div>
-
-    <div class="product">
-       <center> <img src="https://cdn.cvp.com/images/products/12-09-20231694528687burano-small.jpg" alt = "placeholder"></center>
-        <div class = "product-desc">
-            <h3>Product Name</h3>
-            <p>Product Description</p>
-            <p>Price</p>
-            <p>Stock: </p>
-            <a href = "https://cvp.com/product/sony-burano-8k-camera">Link</a>
-        </div>
-    </div>
-
-    <div class="product">
-       <center> <img src="https://cdn.cvp.com/images/products/12-09-20231694528687burano-small.jpg" alt = "placeholder"></center>
-        <div class = "product-desc">
-            <h3>Product Name</h3>
-            <p>Product Description</p>
-            <p>Price</p>
-            <p>Stock: </p>
-            <a href = "https://cvp.com/product/sony-burano-8k-camera">Link</a>
-        </div>
-    </div>
-
-    <div class="product">
-       <center> <img src="https://cdn.cvp.com/images/products/12-09-20231694528687burano-small.jpg" alt = "placeholder"></center>
-        <div class = "product-desc">
-            <h3>Product Name</h3>
-            <p>Product Description</p>
-            <p>Price</p>
-            <p>Stock: </p>
-            <a href = "https://cvp.com/product/sony-burano-8k-camera">Link</a>
-        </div>
-    </div>
-
-    <div class="product">
-       <center> <img src="https://cdn.cvp.com/images/products/12-09-20231694528687burano-small.jpg" alt = "placeholder"></center>
-        <div class = "product-desc">
-            <h3>Product Name</h3>
-            <p>Product Description</p>
-            <p>Price</p>
-            <p>Stock: </p>
-            <a href = "https://cvp.com/product/sony-burano-8k-camera">Link</a>
-        </div>
-    </div>
-
-    <div class="product">
-       <center> <img src="https://cdn.cvp.com/images/products/12-09-20231694528687burano-small.jpg" alt = "placeholder"></center>
-        <div class = "product-desc">
-            <h3>Product Name</h3>
-            <p>Product Description</p>
-            <p>Price</p>
-            <p>Stock: </p>
-            <a href = "https://cvp.com/product/sony-burano-8k-camera">Link</a>
-        </div>
-    </div>
-
-    <div class="product">
-       <center> <img src="https://cdn.cvp.com/images/products/12-09-20231694528687burano-small.jpg" alt = "placeholder"></center>
-        <div class = "product-desc">
-            <h3>Product Name</h3>
-            <p>Product Description</p>
-            <p>Price</p>
-            <p>Stock: </p>
-            <a href = "https://cvp.com/product/sony-burano-8k-camera">Link</a>
-        </div>
-    </div>
-
-    <div class="product">
-       <center> <img src="https://cdn.cvp.com/images/products/12-09-20231694528687burano-small.jpg" alt = "placeholder"></center>
-        <div class = "product-desc">
-            <h3>Product Name</h3>
-            <p>Product Description</p>
-            <p>Price</p>
-            <p>Stock: </p>
-            <a href = "https://cvp.com/product/sony-burano-8k-camera">Link</a>
-        </div>
-    </div>
-
-    <div class="product">
-       <center> <img src="https://cdn.cvp.com/images/products/12-09-20231694528687burano-small.jpg" alt = "placeholder"></center>
-        <div class = "product-desc">
-            <h3>Product Name</h3>
-            <p>Product Description</p>
-            <p>Price</p>
-            <p>Stock: </p>
-            <a href = "https://cvp.com/product/sony-burano-8k-camera">Link</a>
-        </div>
-    </div>
-    
 </div>
-*/ 
-//includes the files that connect to the database and that allows me to grab data from the cvp_exercise table
-include 'db_connect.php';
-include 'catalogue.php';
 
-//calls the database connection class and calls the connect() function within the object
-$dbObject = new Database();
-$connect = $dbObject->connect();
-
-/*
-calls the products class from within catalogue.php but also passes the dbo object (linking the pdo object to the retrieval object) within the function
-$products vairable is used to call the function that displays that fetches the data from a simple sql select query into an array (from the catalogue.php return statement)
-*/
-$productInstance = new Products($connect);
-$products = $productInstance->getAllProducts();
 
 /*
 used a foreach statement to loop through each selected row from the data as the data is in an array data type
@@ -170,14 +111,7 @@ foreach($products as $product) {
 a for each loop to assign vairables to each database record. 
 also echoed out some results to see that they are correctly assined to the vairables
 */
-foreach($products as $product) {
-  $id = $product['productID'];
-  $productName = $product['product_name'];
-  $category = $product['category'];
-  $price = $product['price'];
-  $image = $product['image'];
-  $link = $product['link'];
-  $stockStatus = $product['stock_status'];
+
 
   /*
   echo "ID: $id<br>";
@@ -191,19 +125,7 @@ foreach($products as $product) {
 
 
   //echo "This product name is:.$productName.<br>";
-  echo "<div class = 'product-container'>";
-  echo "<div class='product'>";
-  echo "<center> <img src='$image' alt = 'placeholder'></center>";
-  echo"<div class = 'product-desc'>";
-  echo"<h3>$productName</h3>";
-  echo"<p>$category</p>";
-  echo"<p>£$price</p>";
-  echo"<p>Stock: $stockStatus</p>";
-  echo"<a href = '.$link.'>Click here to find out more!</a>";
-  echo"</div>";
-  echo"</div>";
-  echo"</div>";
-  
+ 
   
 
 

@@ -2,7 +2,7 @@
 
 class Products {
     private $db;
-    //used a constructore as I want to make absolute sure a pdo object gets passed through
+    //used a constructor as I want to make absolute sure a pdo object gets passed through
     public function __construct(PDO $db) {
         $this->db = $db;
     }

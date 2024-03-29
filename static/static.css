@@ -67,7 +67,7 @@ h1 {
 
 .product-container img {
     max-width: 25%;
-    max-height: 150px;
+    max-height: 100px;
     height:auto;
     display: block;
     margin: 0 auto;
